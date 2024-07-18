@@ -1,0 +1,6 @@
+# __define-ocg__
+def StringChanges(str):
+    return str
+
+# Test case
+print(StringChanges("MrtyNNgMM"))  
