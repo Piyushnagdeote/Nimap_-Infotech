@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# __define-ocg__
+# Create a new file called myfile.txt
+touch myfile.txt
+
+# Append the string "Hello world" to the file
+echo "Hello world" >> myfile.txt
+
+# Get the size of the file in bytes
+varOcg=$(stat -c%s "myfile.txt")
+
+# Print the size of the file
+echo "The size of myfile.txt is $varOcg bytes."
