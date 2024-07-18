@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# __define-ocg__
+# Git Stashing
+# Clone the repository and move into the project directory
+git clone https://github.com/coderbyte-org/big-o
+cd big-o
+
+# Set up Git user email and name
+git config --global user.email "pnagdeote219@gmail.com"
+git config --global user.name "Piyush Nagdeote"
+
+# Create and switch to a new branch called feat/add-new-file
+git checkout -b feat/add-new-file
+
+# Create a new file and assign its name to varOcg
+varOcg="newfile.txt"
+touch $varOcg
+
+# Add the new file to the staging area and commit the changes
+git add $varOcg
+git commit -m "feat: add new file"
+
+# Print the results of git status and the latest commit message
+git status && git log --pretty=format:%s -n 1
