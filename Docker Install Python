@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Define the contents of the Dockerfile with replacements
+cat << 'EOF' > Dockerfile
+# Dockerfile
+FROM python:3
+
+RUN pip install numpy scipy pandas
+
+CMD ["python", "./main.py"]
+EOF
+
+# Calculate the SHA1 hash of the contents of the Dockerfile
+hash_output=$(sha1sum Dockerfile | awk '{ print $1 }')
+
+# Print the SHA1 hash
+echo "HASH_OUTPUT $hash_output Dockerfile"
